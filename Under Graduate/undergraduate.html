@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undergraduate Student Questionnaire</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header-container">
+            <h1>Undergraduate Student Questionnaire</h1>
+            <button id="darkModeToggle" class="dark-mode-toggle">
+                <span class="light-icon">☀️</span>
+                <span class="dark-icon">🌙</span>
+            </button>
+        </div>
+        <form id="undergradForm">
+            <!-- Personal Information Section -->
+            <div class="section">
+                <h2 class="section-title">Basic Information</h2>
+                <div class="form-group">
+                    <label for="fullName" class="required">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                    <div class="validation-message" id="fullNameError">Please enter your full name</div>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="required">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                    <div class="validation-message" id="emailError">Please enter a valid email address</div>
+                </div>
+            </div>
+
+            <!-- Academic Information Section -->
+            <div class="section">
+                <h2 class="section-title">Academic Information</h2>
+                <div class="form-group">
+                    <label for="major" class="required">Current Major</label>
+                    <input type="text" id="major" name="major" required>
+                    <div class="validation-message" id="majorError">Please enter your major</div>
+                </div>
+                <div class="form-group">
+                    <label for="gpa">Current GPA (if applicable)</label>
+                    <input type="number" id="gpa" name="gpa" step="0.01" min="0" max="4.0">
+                </div>
+                <div class="form-group">
+                    <label for="year" class="required">Year of Study</label>
+                    <select id="year" name="year" required>
+                        <option value="">Select Year</option>
+                        <option value="Freshman">Freshman</option>
+                        <option value="Sophomore">Sophomore</option>
+                        <option value="Junior">Junior</option>
+                        <option value="Senior">Senior</option>
+                    </select>
+                    <div class="validation-message" id="yearError">Please select your year of study</div>
+                </div>
+                <div class="form-group">
+                    <label for="favoriteSubject">Favorite Subject</label>
+                    <input type="text" id="favoriteSubject" name="favoriteSubject">
+                </div>
+                <div class="form-group">
+                    <label>Academic Strengths (select all that apply)</label>
+                    <div class="subject-preference" id="strengths">
+                        <div class="subject-card" data-subject="Math">Math</div>
+                        <div class="subject-card" data-subject="Science">Science</div>
+                        <div class="subject-card" data-subject="Writing">Writing</div>
+                        <div class="subject-card" data-subject="Languages">Languages</div>
+                        <div class="subject-card" data-subject="Arts">Arts</div>
+                        <div class="subject-card" data-subject="Social Sciences">Social Sciences</div>
+                    </div>
+                    <input type="hidden" id="selectedStrengths" name="selectedStrengths">
+                </div>
+                <div class="form-group">
+                    <label for="careerGoals">Career Goals After Graduation</label>
+                    <textarea id="careerGoals" name="careerGoals" rows="2"></textarea>
+                </div>
+            </div>
+
+            <button type="submit" id="submitBtn">Submit Questionnaire</button>
+        </form>
+        <div class="success-message" id="successMessage">
+            Thank you! Your questionnaire has been submitted successfully.
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

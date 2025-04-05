@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Register</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <div class="header">
+                <h1 class="logo">EduLearn</h1>
+                <div class="dark-mode-toggle">
+                    <input type="checkbox" id="darkModeToggle" class="toggle-input">
+                    <label for="darkModeToggle" class="toggle-label">
+                        <i class="fas fa-moon"></i>
+                    </label>
+                </div>
+            </div>
+            
+            <h2>AdWiser</h2>
+            <p class="subtitle">Enter your credentials to access your account</p>
+            
+            <form id="signInForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="education">Education</label>
+                    <select id="education" name="education" required>
+                        <option value="" selected disabled>Select your education level</option>
+                        <option value="middleSchool">Middle School</option>
+                        <option value="highSchool">High School</option>
+                        <option value="underGraduate">Under Graduate</option>
+                        <option value="graduate">Graduate</option>
+                        <option value="postGraduate">Post Graduate</option>
+                    </select>
+                </div>
+                
+                <!-- Dynamic education fields container -->
+                <div id="dynamicEducationFields"></div>
+                
+                <div class="form-group">
+                    <label for="contactNumber">Contact Number</label>
+                    <input type="tel" id="contactNumber" name="contactNumber" placeholder="Enter your contact number" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                
+                <div class="form-options">
+                    <div class="remember-me">
+                        <input type="checkbox" id="rememberMe" name="rememberMe">
+                        <label for="rememberMe">Remember me</label>
+                    </div>
+                    <a href="#" class="forgot-link">Forgot Password?</a>
+                </div>
+                
+                <button type="submit" class="submit-btn">Sign In</button>
+                
+                
+            </form>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

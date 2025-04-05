@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Middle School Student Questionnaire</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+            </label>
+            <i class="fas fa-moon"></i>
+        </div>
+
+        <header>
+            <h1>Middle School Student Questionnaire</h1>
+            <p>Please answer the following 10 questions.</p>
+        </header>
+
+        <form id="studentForm">
+            <!-- Question 1 -->
+            <div class="form-group">
+                <label for="name">1. What is your name?</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <!-- Question 2 - Hidden since Middle School is pre-selected -->
+            <input type="hidden" id="educationLevel" name="educationLevel" value="middle">
+            
+            <!-- Question 3-6: Subject Marks -->
+            <div class="form-group">
+                <label for="mathMarks">2. What are your marks in Math?</label>
+                <select id="mathMarks" name="mathMarks" required>
+                    <option value="" disabled selected>Select your marks range</option>
+                    <option value="90-100">90-100</option>
+                    <option value="80-89">80-89</option>
+                    <option value="70-79">70-79</option>
+                    <option value="60-69">60-69</option>
+                    <option value="below60">Below 60</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="scienceMarks">3. What are your marks in Science?</label>
+                <select id="scienceMarks" name="scienceMarks" required>
+                    <option value="" disabled selected>Select your marks range</option>
+                    <option value="90-100">90-100</option>
+                    <option value="80-89">80-89</option>
+                    <option value="70-79">70-79</option>
+                    <option value="60-69">60-69</option>
+                    <option value="below60">Below 60</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="socialScienceMarks">4. What are your marks in Social Science?</label>
+                <select id="socialScienceMarks" name="socialScienceMarks" required>
+                    <option value="" disabled selected>Select your marks range</option>
+                    <option value="90-100">90-100</option>
+                    <option value="80-89">80-89</option>
+                    <option value="70-79">70-79</option>
+                    <option value="60-69">60-69</option>
+                    <option value="below60">Below 60</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="englishMarks">5. What are your marks in English?</label>
+                <select id="englishMarks" name="englishMarks" required>
+                    <option value="" disabled selected>Select your marks range</option>
+                    <option value="90-100">90-100</option>
+                    <option value="80-89">80-89</option>
+                    <option value="70-79">70-79</option>
+                    <option value="60-69">60-69</option>
+                    <option value="below60">Below 60</option>
+                </select>
+            </div>
+            
+            <!-- Question 7 -->
+            <div class="form-group">
+                <label for="expertise">6. If you have expertise in any subject, select an area:</label>
+                <select id="expertise" name="expertise" required>
+                    <option value="none">None</option>
+                    <option value="advancedProblemSolving">Advanced Problem Solving</option>
+                    <option value="creativeWriting">Creative Writing</option>
+                    <option value="codingProgramming">Coding & Programming</option>
+                    <option value="researchAnalysis">Research & Analysis</option>
+                </select>
+            </div>
+            
+            <!-- Question 8 -->
+            <div class="form-group">
+                <label for="futureCareer">7. What do you want to be when you grow up?</label>
+                <input type="text" id="futureCareer" name="futureCareer" required>
+            </div>
+            
+            <!-- Question 9 -->
+            <div class="form-group">
+                <label for="hobbies">8. What are your hobbies?</label>
+                <textarea id="hobbies" name="hobbies" rows="2" required></textarea>
+            </div>
+            
+            <!-- Question 10 -->
+            <div class="form-group">
+                <label for="studyHours">9. How many hours do you study per day?</label>
+                <select id="studyHours" name="studyHours" required>
+                    <option value="" disabled selected>Select study hours</option>
+                    <option value="less1">Less than 1 hour</option>
+                    <option value="1-2">1-2 hours</option>
+                    <option value="2-3">2-3 hours</option>
+                    <option value="more3">More than 3 hours</option>
+                </select>
+            </div>
+            
+            <!-- Question 11 -->
+            <div class="form-group">
+                <label for="motivation">10. What motivates you to study?</label>
+                <textarea id="motivation" name="motivation" rows="2" required></textarea>
+            </div>
+
+            <div class="form-buttons">
+                <button type="submit" id="submitBtn">Submit</button>
+                <button type="reset" id="resetBtn">Reset</button>
+            </div>
+        </form>
+
+        <div id="confirmation" class="hidden">
+            <h2>Thank you for submitting!</h2>
+            <div id="summary"></div>
+            <button id="returnBtn">Fill Another Form</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

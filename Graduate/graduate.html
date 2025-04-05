@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graduate Profile Form</title>
+    <link rel="stylesheet" href="<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Graduate Profile Form</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="theme-toggle">
+                <button id="darkModeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            
+            <h1>Graduate Profile</h1>
+            <form id="graduateForm">
+                <div class="progress-bar">
+                    <div class="progress" id="formProgress"></div>
+                </div>
+                
+                <!-- Step 1: Basic Info -->
+                <div class="form-step" id="step1">
+                    <h2>Basic Information</h2>
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="button-group">
+                        <button type="button" class="next-btn">Next</button>
+                    </div>
+                </div>
+                
+                <!-- Step 2: Education -->
+                <div class="form-step" id="step2">
+                    <h2>Education Details</h2>
+                    <div class="form-group">
+                        <label for="college">College/University Name</label>
+                        <input type="text" id="college" name="college" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="major">Major/Specialization</label>
+                        <input type="text" id="major" name="major" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="graduationYear">Graduation Year</label>
+                        <input type="number" id="graduationYear" name="graduationYear" min="1950" max="2025" required>
+                    </div>
+                    <div class="button-group">
+                        <button type="button" class="prev-btn">Previous</button>
+                        <button type="button" class="next-btn">Next</button>
+                    </div>
+                </div>
+                
+                <!-- Step 3: Academic Performance -->
+                <div class="form-step" id="step3">
+                    <h2>Academic Performance</h2>
+                    <div class="form-group">
+                        <p>Add your core subjects and marks/grades</p>
+                        <div id="subjectContainer">
+                            <div class="subject-entry">
+                                <input type="text" placeholder="Subject Name" class="subject-name" required>
+                                <input type="text" placeholder="Grade/Mark" class="subject-grade" required>
+                            </div>
+                        </div>
+                        <button type="button" id="addSubject" class="action-btn">
+                            <i class="fas fa-plus"></i> Add Another Subject
+                        </button>
+                    </div>
+                    <div class="form-group">
+                        <label for="cgpa">Overall CGPA/Percentage</label>
+                        <input type="text" id="cgpa" name="cgpa" required>
+                    </div>
+                    <div class="button-group">
+                        <button type="button" class="prev-btn">Previous</button>
+                        <button type="button" class="next-btn">Next</button>
+                    </div>
+                </div>
+                
+                <!-- Step 4: Future Plans -->
+                <div class="form-step" id="step4">
+                    <h2>Future Goals</h2>
+                    <div class="form-group">
+                        <label for="careerGoals">Career Objectives</label>
+                        <textarea id="careerGoals" name="careerGoals" rows="3" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Exams Planning to Take</label>
+                        <div class="checkbox-group" id="examOptions">
+                            <!-- Will be dynamically populated based on major -->
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="otherExam">Other Exam (if not listed above)</label>
+                        <input type="text" id="otherExam" name="otherExam">
+                    </div>
+                    <div class="button-group">
+                        <button type="button" class="prev-btn">Previous</button>
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </div>
+                </div>
+            </form>
+            
+            <!-- Success Message -->
+            <div class="success-message" id="successMessage">
+                <div class="success-content">
+                    <i class="fas fa-check-circle"></i>
+                    <h2>Thank you for your submission!</h2>
+                    <p>Your graduate profile has been submitted successfully.</p>
+                    <button id="startOver">Start Over</button>
+                </div>
+            </div>
+        </div>
+        
+        <script src="script.js"></script>
+    </body>
+    </html>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="theme-toggle">
+            <button id="darkModeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+        
+        <h1>Graduate Profile</h1>
+        <form id="graduateForm">
+            <div class="progress-bar">
+                <div class="progress" id="formProgress"></div>
+            </div>
+            
+            <!-- Step 1: Basic Info -->
+            <div class="form-step" id="step1">
+                <h2>Basic Information</h2>
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="button-group">
+                    <button type="button" class="next-btn">Next</button>
+                </div>
+            </div>
+            
+            <!-- Step 2: Education -->
+            <div class="form-step" id="step2">
+                <h2>Education Details</h2>
+                <div class="form-group">
+                    <label for="college">College/University Name</label>
+                    <input type="text" id="college" name="college" required>
+                </div>
+                <div class="form-group">
+                    <label for="major">Major/Specialization</label>
+                    <input type="text" id="major" name="major" required>
+                </div>
+                <div class="form-group">
+                    <label for="graduationYear">Graduation Year</label>
+                    <input type="number" id="graduationYear" name="graduationYear" min="1950" max="2025" required>
+                </div>
+                <div class="button-group">
+                    <button type="button" class="prev-btn">Previous</button>
+                    <button type="button" class="next-btn">Next</button>
+                </div>
+            </div>
+            
+            <!-- Step 3: Academic Performance -->
+            <div class="form-step" id="step3">
+                <h2>Academic Performance</h2>
+                <div class="form-group">
+                    <p>Add your core subjects and marks/grades</p>
+                    <div id="subjectContainer">
+                        <div class="subject-entry">
+                            <input type="text" placeholder="Subject Name" class="subject-name" required>
+                            <input type="text" placeholder="Grade/Mark" class="subject-grade" required>
+                        </div>
+                    </div>
+                    <button type="button" id="addSubject" class="action-btn">
+                        <i class="fas fa-plus"></i> Add Another Subject
+                    </button>
+                </div>
+                <div class="form-group">
+                    <label for="cgpa">Overall CGPA/Percentage</label>
+                    <input type="text" id="cgpa" name="cgpa" required>
+                </div>
+                <div class="button-group">
+                    <button type="button" class="prev-btn">Previous</button>
+                    <button type="button" class="next-btn">Next</button>
+                </div>
+            </div>
+            
+            <!-- Step 4: Future Plans -->
+            <div class="form-step" id="step4">
+                <h2>Future Goals</h2>
+                <div class="form-group">
+                    <label for="careerGoals">Career Objectives</label>
+                    <textarea id="careerGoals" name="careerGoals" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Exams Planning to Take</label>
+                    <div class="checkbox-group" id="examOptions">
+                        <!-- Will be dynamically populated based on major -->
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="otherExam">Other Exam (if not listed above)</label>
+                    <input type="text" id="otherExam" name="otherExam">
+                </div>
+                <div class="button-group">
+                    <button type="button" class="prev-btn">Previous</button>
+                    <button type="submit" class="submit-btn">Submit</button>
+                </div>
+            </div>
+        </form>
+        
+        <!-- Success Message -->
+        <div class="success-message" id="successMessage">
+            <div class="success-content">
+                <i class="fas fa-check-circle"></i>
+                <h2>Thank you for your submission!</h2>
+                <p>Your graduate profile has been submitted successfully.</p>
+                <button id="startOver">Start Over</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

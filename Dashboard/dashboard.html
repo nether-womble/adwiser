@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="light-mode">
+    <header>
+        <div class="header-container">
+            <h1>Student Profile Dashboard</h1>
+            <div class="user-controls">
+                <div class="theme-toggle">
+                    <i class="fas fa-sun"></i>
+                    <label class="switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider round"></span>
+                    </label>
+                    <i class="fas fa-moon"></i>
+                </div>
+                <div class="user-profile">
+                    <img src="/api/placeholder/40/40" alt="Profile Picture" class="profile-pic">
+                    <span>Jane Doe</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li class="active"><a href="#profile"><i class="fas fa-user"></i> Profile</a></li>
+                    <li><a href="#academic"><i class="fas fa-graduation-cap"></i> Academic History</a></li>
+                    <li><a href="#preferences"><i class="fas fa-sliders-h"></i> Preferences</a></li>
+                    <li><a href="#career"><i class="fas fa-briefcase"></i> Career Goals</a></li>
+                    <li><a href="#prerequisites"><i class="fas fa-clipboard-check"></i> Prerequisites</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <section id="profile" class="active-section">
+                <div class="card">
+                    <h2>Student Profile</h2>
+                    <div class="profile-details">
+                        <div class="profile-image">
+                            <img src="/api/placeholder/150/150" alt="Profile Picture">
+                        </div>
+                        <div class="profile-info">
+                            <div class="info-group">
+                                <span class="label">Name:</span>
+                                <span class="value">Jane Doe</span>
+                            </div>
+                            <div class="info-group">
+                                <span class="label">Student ID:</span>
+                                <span class="value">S12345678</span>
+                            </div>
+                            <div class="info-group">
+                                <span class="label">Major:</span>
+                                <span class="value">Computer Science</span>
+                            </div>
+                            <div class="info-group">
+                                <span class="label">Year:</span>
+                                <span class="value">Junior</span>
+                            </div>
+                            <div class="info-group">
+                                <span class="label">Email:</span>
+                                <span class="value">jane.doe@university.edu</span>
+                            </div>
+                            <div class="info-group">
+                                <span class="label">Advisor:</span>
+                                <span class="value">Dr. Sarah Johnson</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="academic">
+                <div class="card">
+                    <h2>Academic History</h2>
+                    <div class="gpa-summary">
+                        <div class="gpa-box">
+                            <span class="gpa">3.8</span>
+                            <span class="gpa-label">Overall GPA</span>
+                        </div>
+                        <div class="gpa-box">
+                            <span class="gpa">3.9</span>
+                            <span class="gpa-label">Major GPA</span>
+                        </div>
+                        <div class="gpa-box">
+                            <span class="credits">86</span>
+                            <span class="gpa-label">Credits Earned</span>
+                        </div>
+                    </div>
+                    
+                    <div class="courses-completed">
+                        <h3>Courses Completed</h3>
+                        <table id="courses-table">
+                            <thead>
+                                <tr>
+                                    <th>Course Code</th>
+                                    <th>Course Name</th>
+                                    <th>Semester</th>
+                                    <th>Grade</th>
+                                    <th>Credits</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Course data will be populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section id="preferences">
+                <div class="card">
+                    <h2>Learning Preferences</h2>
+                    <div class="preferences-container">
+                        <div class="preference-group">
+                            <h3>Fields of Interest</h3>
+                            <div class="interest-tags">
+                                <span class="tag selected">Artificial Intelligence</span>
+                                <span class="tag selected">Data Science</span>
+                                <span class="tag">Cybersecurity</span>
+                                <span class="tag selected">Web Development</span>
+                                <span class="tag">Mobile Apps</span>
+                                <span class="tag">Game Development</span>
+                                <span class="tag">Computer Graphics</span>
+                                <span class="tag">Human-Computer Interaction</span>
+                                <span class="tag">Computer Networks</span>
+                            </div>
+                        </div>
+                        
+                        <div class="preference-group">
+                            <h3>Learning Style</h3>
+                            <div class="learning-style">
+                                <div class="style-item">
+                                    <label for="visual">Visual</label>
+                                    <input type="range" id="visual" min="1" max="10" value="8" class="slider">
+                                    <span class="value">8</span>
+                                </div>
+                                <div class="style-item">
+                                    <label for="auditory">Auditory</label>
+                                    <input type="range" id="auditory" min="1" max="10" value="6" class="slider">
+                                    <span class="value">6</span>
+                                </div>
+                                <div class="style-item">
+                                    <label for="reading">Reading/Writing</label>
+                                    <input type="range" id="reading" min="1" max="10" value="9" class="slider">
+                                    <span class="value">9</span>
+                                </div>
+                                <div class="style-item">
+                                    <label for="kinesthetic">Kinesthetic</label>
+                                    <input type="range" id="kinesthetic" min="1" max="10" value="7" class="slider">
+                                    <span class="value">7</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="preference-group">
+                            <h3>Schedule Preferences</h3>
+                            <div class="schedule-prefs">
+                                <div class="schedule-item">
+                                    <input type="checkbox" id="morning" checked>
+                                    <label for="morning">Morning Classes</label>
+                                </div>
+                                <div class="schedule-item">
+                                    <input type="checkbox" id="afternoon" checked>
+                                    <label for="afternoon">Afternoon Classes</label>
+                                </div>
+                                <div class="schedule-item">
+                                    <input type="checkbox" id="evening">
+                                    <label for="evening">Evening Classes</label>
+                                </div>
+                                <div class="schedule-item">
+                                    <input type="checkbox" id="online" checked>
+                                    <label for="online">Online Courses</label>
+                                </div>
+                                <div class="schedule-item">
+                                    <input type="checkbox" id="hybrid" checked>
+                                    <label for="hybrid">Hybrid Courses</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="career">
+                <div class="card">
+                    <h2>Career Goals</h2>
+                    <div class="career-container">
+                        <div class="career-selection">
+                            <h3>Primary Career Path</h3>
+                            <select id="career-path" class="career-select">
+                                <option value="data-science">Data Science</option>
+                                <option value="software-engineering">Software Engineering</option>
+                                <option value="product-design">Product Design</option>
+                                <option value="cybersecurity">Cybersecurity</option>
+                                <option value="ai-specialist">AI Specialist</option>
+                                <option value="web-development">Web Development</option>
+                                <option value="mobile-development">Mobile Development</option>
+                            </select>
+                        </div>
+                        
+                        <div class="career-path-details">
+                            <h3>Data Science Career Path</h3>
+                            <div class="path-description">
+                                <p>A career in Data Science involves analyzing complex data sets to find patterns and insights that drive business decisions. This path combines statistics, mathematics, and programming skills.</p>
+                            </div>
+                            
+                            <div class="recommended-skills">
+                                <h4>Recommended Skills</h4>
+                                <ul class="skills-list">
+                                    <li><span class="skill">Statistics</span> <span class="status complete">Complete</span></li>
+                                    <li><span class="skill">Python Programming</span> <span class="status complete">Complete</span></li>
+                                    <li><span class="skill">Machine Learning</span> <span class="status in-progress">In Progress</span></li>
+                                    <li><span class="skill">SQL & Databases</span> <span class="status complete">Complete</span></li>
+                                    <li><span class="skill">Data Visualization</span> <span class="status missing">Missing</span></li>
+                                    <li><span class="skill">Big Data Technologies</span> <span class="status missing">Missing</span></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="recommended-courses">
+                                <h4>Recommended Courses</h4>
+                                <ul class="course-list">
+                                    <li><span class="course-code">CS 4520</span> <span class="course-name">Advanced Machine Learning</span></li>
+                                    <li><span class="course-code">DS 3300</span> <span class="course-name">Data Visualization Techniques</span></li>
+                                    <li><span class="course-code">CS 5620</span> <span class="course-name">Big Data Analytics</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="prerequisites">
+                <div class="card">
+                    <h2>Course Prerequisites Checker</h2>
+                    <div class="prerequisites-container">
+                        <div class="course-selection">
+                            <h3>Check Prerequisites For:</h3>
+                            <select id="course-check" class="course-select">
+                                <option value="">-- Select a Course --</option>
+                                <option value="cs4520">CS 4520 - Advanced Machine Learning</option>
+                                <option value="cs4720">CS 4720 - Computer Graphics</option>
+                                <option value="cs5330">CS 5330 - Computer Vision</option>
+                                <option value="cs4610">CS 4610 - Computer Networks</option>
+                                <option value="cs5620">CS 5620 - Big Data Analytics</option>
+                            </select>
+                            <button id="check-btn" class="btn">Check Prerequisites</button>
+                        </div>
+                        
+                        <div id="prerequisites-results" class="prerequisites-results">
+                            <h3>Prerequisites Analysis</h3>
+                            <div class="course-title">CS 4520 - Advanced Machine Learning</div>
+                            
+                            <div class="status-summary">
+                                <div class="status-box warning">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                    <span>Missing Prerequisites</span>
+                                </div>
+                            </div>
+                            
+                            <div class="prerequisites-list">
+                                <div class="prerequisite-item complete">
+                                    <i class="fas fa-check-circle"></i>
+                                    <div class="prereq-info">
+                                        <span class="prereq-code">CS 3420</span>
+                                        <span class="prereq-name">Introduction to Machine Learning</span>
+                                    </div>
+                                    <div class="prereq-status">Completed (A)</div>
+                                </div>
+                                
+                                <div class="prerequisite-item complete">
+                                    <i class="fas fa-check-circle"></i>
+                                    <div class="prereq-info">
+                                        <span class="prereq-code">MATH 3300</span>
+                                        <span class="prereq-name">Linear Algebra</span>
+                                    </div>
+                                    <div class="prereq-status">Completed (B+)</div>
+                                </div>
+                                
+                                <div class="prerequisite-item missing">
+                                    <i class="fas fa-times-circle"></i>
+                                    <div class="prereq-info">
+                                        <span class="prereq-code">STAT 4100</span>
+                                        <span class="prereq-name">Advanced Statistics</span>
+                                    </div>
+                                    <div class="prereq-status">Not Completed</div>
+                                </div>
+                            </div>
+                            
+                            <div class="recommendation">
+                                <h4>Recommendation</h4>
+                                <p>You need to complete STAT 4100 - Advanced Statistics before enrolling in CS 4520. This course is offered in the upcoming Fall semester.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

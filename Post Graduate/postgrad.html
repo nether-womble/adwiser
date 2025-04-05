@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post-Graduate Profile Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="theme-toggle">
+            <button id="darkModeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+        
+        <h1>Post-Graduate Profile</h1>
+        <form id="postGradForm">
+            <div class="progress-bar">
+                <div class="progress" id="formProgress"></div>
+            </div>
+            
+            <!-- Step 1: Basic Info -->
+            <div class="form-step" id="step1">
+                <h2>Basic Information</h2>
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="button-group">
+                    <button type="button" class="next-btn">Next</button>
+                </div>
+            </div>
+            
+            <!-- Step 2: Previous Education -->
+            <div class="form-step" id="step2">
+                <h2>Undergraduate Education</h2>
+                <div class="form-group">
+                    <label for="undergrad_college">Undergraduate Institution</label>
+                    <input type="text" id="undergrad_college" name="undergrad_college" required>
+                </div>
+                <div class="form-group">
+                    <label for="undergrad_major">Undergraduate Major</label>
+                    <input type="text" id="undergrad_major" name="undergrad_major" required>
+                </div>
+                <div class="form-group">
+                    <label for="undergrad_year">Undergraduate Graduation Year</label>
+                    <input type="number" id="undergrad_year" name="undergrad_year" min="1950" max="2025" required>
+                </div>
+                <div class="form-group">
+                    <label for="undergrad_gpa">Undergraduate GPA/Percentage</label>
+                    <input type="text" id="undergrad_gpa" name="undergrad_gpa" required>
+                </div>
+                <div class="button-group">
+                    <button type="button" class="prev-btn">Previous</button>
+                    <button type="button" class="next-btn">Next</button>
+                </div>
+            </div>
+            
+            <!-- Step 3: Post-Graduate Education -->
+            <div class="form-step" id="step3">
+                <h2>Post-Graduate Education</h2>
+                <div class="form-group">
+                    <label for="postgrad_type">Post-Graduate Degree Type</label>
+                    <select id="postgrad_type" name="postgrad_type" required>
+                        <option value="">Select Degree Type</option>
+                        <option value="Masters">Master's Degree</option>
+                        <option value="PhD">PhD/Doctorate</option>
+                        <option value="PostDoc">Post-Doctoral</option>
+                        <option value="MBA">MBA</option>
+                        <option value="MPhil">M.Phil</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="postgrad_institution">Post-Graduate Institution</label>
+                    <input type="text" id="postgrad_institution" name="postgrad_institution" required>
+                </div>
+                <div class="form-group">
+                    <label for="postgrad_field">Field of Study/Specialization</label>
+                    <input type="text" id="postgrad_field" name="postgrad_field" required>
+                </div>
+                <div class="form-group">
+                    <label for="research_areas">Research Areas/Topics</label>
+                    <textarea id="research_areas" name="research_areas" rows="3" required></textarea>
+                </div>
+                <div class="button-group">
+                    <button type="button" class="prev-btn">Previous</button>
+                    <button type="button" class="next-btn">Next</button>
+                </div>
+            </div>
+            
+            <!-- Step 4: Academic Achievements -->
+            <div class="form-step" id="step4">
+                <h2>Academic Achievements</h2>
+                <div class="form-group">
+                    <label>Publications & Research</label>
+                    <div id="publicationContainer">
+                        <div class="publication-entry">
+                            <input type="text" placeholder="Publication/Research Title" class="publication-title" required>
+                            <select class="publication-type">
+                                <option value="Journal">Journal Article</option>
+                                <option value="Conference">Conference Paper</option>
+                                <option value="Book">Book/Book Chapter</option>
+                                <option value="Thesis">Thesis/Dissertation</option>
+                                <option value="Other">Other Research</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="button" id="addPublication" class="action-btn">
+                        <i class="fas fa-plus"></i> Add Another Publication
+                    </button>
+                </div>
+                <div class="form-group">
+                    <label for="academic_honors">Academic Honors/Achievements</label>
+                    <textarea id="academic_honors" name="academic_honors" rows="2" placeholder="Scholarships, awards, fellowships, etc."></textarea>
+                </div>
+                <div class="button-group">
+                    <button type="button" class="prev-btn">Previous</button>
+                    <button type="button" class="next-btn">Next</button>
+                </div>
+            </div>
+            
+            <!-- Step 5: Future Plans -->
+            <div class="form-step" id="step5">
+                <h2>Future Plans</h2>
+                <div class="form-group">
+                    <label for="career_path">Intended Career Path</label>
+                    <select id="career_path" name="career_path" required>
+                        <option value="">Select Primary Career Path</option>
+                        <option value="Academia">Academia/Research</option>
+                        <option value="Industry">Industry/Corporate</option>
+                        <option value="Government">Government/Public Sector</option>
+                        <option value="NonProfit">Non-Profit/NGO</option>
+                        <option value="Entrepreneurship">Entrepreneurship</option>
+                        <option value="Consulting">Consulting</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="future_research">Future Research Interests</label>
+                    <textarea id="future_research" name="future_research" rows="2"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Professional Certifications Pursuing</label>
+                    <div id="certificationOptions" class="checkbox-group">
+                        <!-- Will be dynamically populated based on field -->
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="other_certification">Other Certification (if not listed)</label>
+                    <input type="text" id="other_certification" name="other_certification">
+                </div>
+                <div class="button-group">
+                    <button type="button" class="prev-btn">Previous</button>
+                    <button type="submit" class="submit-btn">Submit</button>
+                </div>
+            </div>
+        </form>
+        
+        <!-- Success Message -->
+        <div class="success-message" id="successMessage">
+            <div class="success-content">
+                <i class="fas fa-check-circle"></i>
+                <h2>Thank you for your submission!</h2>
+                <p>Your post-graduate profile has been submitted successfully.</p>
+                <button id="startOver">Start Over</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

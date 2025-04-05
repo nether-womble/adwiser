@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High School Student Questionnaire</title>
+    <link rel="stylesheet" href="highschool-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+            </label>
+            <i class="fas fa-moon"></i>
+        </div>
+
+        <header>
+            <h1>High School Student Questionnaire</h1>
+            <p>Please answer the following questions.</p>
+        </header>
+
+        <form id="studentForm">
+            <!-- Question 1: Name -->
+            <div class="form-group">
+                <label for="name">1. What is your name?</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <!-- Education level is pre-selected as High School -->
+            <input type="hidden" id="educationLevel" name="educationLevel" value="high">
+            
+            <!-- Question 2: Class -->
+            <div class="form-group">
+                <label for="class">2. Which class are you in?</label>
+                <select id="class" name="class" required>
+                    <option value="" disabled selected>Select your class</option>
+                    <option value="11">Class 11</option>
+                    <option value="12">Class 12</option>
+                </select>
+            </div>
+            
+            <!-- Question 3: Stream -->
+            <div class="form-group">
+                <label for="stream">3. Which stream are you studying?</label>
+                <select id="stream" name="stream" required>
+                    <option value="" disabled selected>Select your stream</option>
+                    <option value="science">Science</option>
+                    <option value="commerce">Commerce</option>
+                    <option value="humanities">Humanities</option>
+                </select>
+            </div>
+            
+            <!-- Science Stream Specific Questions -->
+            <div id="scienceSection" class="stream-section hidden">
+                <!-- Question 4-7: Science Subject Marks -->
+                <div class="form-group">
+                    <label for="physicsMarks">4. What are your marks in Physics?</label>
+                    <select id="physicsMarks" name="physicsMarks">
+                        <option value="" disabled selected>Select your marks range</option>
+                        <option value="90-100">90-100</option>
+                        <option value="80-89">80-89</option>
+                        <option value="70-79">70-79</option>
+                        <option value="60-69">60-69</option>
+                        <option value="below60">Below 60</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="chemistryMarks">5. What are your marks in Chemistry?</label>
+                    <select id="chemistryMarks" name="chemistryMarks">
+                        <option value="" disabled selected>Select your marks range</option>
+                        <option value="90-100">90-100</option>
+                        <option value="80-89">80-89</option>
+                        <option value="70-79">70-79</option>
+                        <option value="60-69">60-69</option>
+                        <option value="below60">Below 60</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="mathsMarks">6. What are your marks in Mathematics?</label>
+                    <select id="mathsMarks" name="mathsMarks">
+                        <option value="" disabled selected>Select your marks range</option>
+                        <option value="90-100">90-100</option>
+                        <option value="80-89">80-89</option>
+                        <option value="70-79">70-79</option>
+                        <option value="60-69">60-69</option>
+                        <option value="below60">Below 60</option>
+                        <option value="notApplicable">Not Applicable</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="biologyMarks">7. What are your marks in Biology?</label>
+                    <select id="biologyMarks" name="biologyMarks">
+                        <option value="" disabled selected>Select your marks range</option>
+                        <option value="90-100">90-100</option>
+                        <option value="80-89">80-89</option>
+                        <option value="70-79">70-79</option>
+                        <option value="60-69">60-69</option>
+                        <option value="below60">Below 60</option>
+                        <option value="notApplicable">Not Applicable</option>
+                    </select>
+                </div>
+                
+                <!-- Question 8: Target Exams -->
+                <div class="form-group">
+                    <label for="scienceTargetExam">8. Which entrance exam are you targeting?</label>
+                    <select id="scienceTargetExam" name="scienceTargetExam">
+                        <option value="" disabled selected>Select your target exam</option>
+                        <option value="jee">JEE (Engineering)</option>
+                        <option value="neet">NEET (Medical)</option>
+                        <option value="kvpy">KVPY</option>
+                        <option value="bitsat">BITSAT</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Commerce Stream Specific Questions -->
+            <div id="commerceSection" class="stream-section hidden">
+                <!-- Question 4-6: Commerce Subject Marks -->
+                <div class="form-group">
+                    <label for="bstMarks">4. What are your marks in Business Studies?</label>
+                    <select id="bstMarks" name="bstMarks">
+                        <option value="" disabled selected>Select your marks range</option>
+                        <option value="90-100">90-100</option>
+                        <option value="80-89">80-89</option>
+                        <option value="70-79">70-79</option>
+                        <option value="60-69">60-69</option>
+                        <option value="below60">Below 60</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="accountsMarks">5. What are your marks in Accountancy?</label>
+                    <select id="accountsMarks" name="accountsMarks">
+                        <option value="" disabled selected>Select your marks range</option>
+                        <option value="90-100">90-100</option>
+                        <option value="80-89">80-89</option>
+                        <option value="70-79">70-79</option>
+                        <option value="60-69">60-69</option>
+                        <option value="below60">Below 60</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="economicsMarks">6. What are your marks in Economics?</label>
+                    <select id="economicsMarks" name="economicsMarks">
+                        <option value="" disabled selected>Select your marks range</option>
+                        <option value="90-100">90-100</option>
+                        <option value="80-89">80-89</option>
+                        <option value="70-79">70-79</option>
+                        <option value="60-69">60-69</option>
+                        <option value="below60">Below 60</option>
+                    </select>
+                </div>
+                
+                <!-- Question 7: Target Certification -->
+                <div class="form-group">
+                    <label for="commerceTargetExam">7. Which professional certification are you targeting?</label>
+                    <select id="commerceTargetExam" name="commerceTargetExam">
+                        <option value="" disabled selected>Select your target certification</option>
+                        <option value="ca">CA (Chartered Accountant)</option>
+                        <option value="cma">CMA (Cost Management Accountant)</option>
+                        <option value="cfa">CFA (Chartered Financial Analyst)</option>
+                        <option value="cs">CS (Company Secretary)</option>
+                        <option value="mba">MBA</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Humanities Stream Specific Questions -->
+            <div id="humanitiesSection" class="stream-section hidden">
+                <!-- Question 4-6: Humanities Subject Marks -->
+                <div class="form-group">
+                    <label for="historyMarks">4. What are your marks in History?</label>
+                    <select id="historyMarks" name="historyMarks">
+                        <option value="" disabled selected>Select your marks range</option>
+                        <option value="90-100">90-100</option>
+                        <option value="80-89">80-89</option>
+                        <option value="70-79">70-79</option>
+                        <option value="60-69">60-69</option>
+                        <option value="below60">Below 60</option>
+                        <option value="notApplicable">Not Applicable</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="politicalScienceMarks">5. What are your marks in Political Science?</label>
+                    <select id="politicalScienceMarks" name="politicalScienceMarks">
+                        <option value="" disabled selected>Select your marks range</option>
+                        <option value="90-100">90-100</option>
+                        <option value="80-89">80-89</option>
+                        <option value="70-79">70-79</option>
+                        <option value="60-69">60-69</option>
+                        <option value="below60">Below 60</option>
+                        <option value="notApplicable">Not Applicable</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="geographyMarks">6. What are your marks in Geography?</label>
+                    <select id="geographyMarks" name="geographyMarks">
+                        <option value="" disabled selected>Select your marks range</option>
+                        <option value="90-100">90-100</option>
+                        <option value="80-89">80-89</option>
+                        <option value="70-79">70-79</option>
+                        <option value="60-69">60-69</option>
+                        <option value="below60">Below 60</option>
+                        <option value="notApplicable">Not Applicable</option>
+                    </select>
+                </div>
+                
+                <!-- Question 7: Target Exams -->
+                <div class="form-group">
+                    <label for="humanitiesTargetExam">7. Which competitive exam are you targeting?</label>
+                    <select id="humanitiesTargetExam" name="humanitiesTargetExam">
+                        <option value="" disabled selected>Select your target exam</option>
+                        <option value="upsc">UPSC (Civil Services)</option>
+                        <option value="law">Law Entrance (CLAT/AILET)</option>
+                        <option value="massCommunication">Mass Communication Entrance</option>
+                        <option value="hotelManagement">Hotel Management Entrance</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Common Questions for All Streams -->
+            <div class="form-group">
+                <label for="futureGoals">9. What are your future career goals?</label>
+                <textarea id="futureGoals" name="futureGoals" rows="2" required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="studyHours">10. How many hours do you study per day?</label>
+                <select id="studyHours" name="studyHours" required>
+                    <option value="" disabled selected>Select study hours</option>
+                    <option value="less2">Less than 2 hours</option>
+                    <option value="2-4">2-4 hours</option>
+                    <option value="4-6">4-6 hours</option>
+                    <option value="more6">More than 6 hours</option>
+                </select>
+            </div>
+
+            <div class="form-buttons">
+                <button type="submit" id="submitBtn">Submit</button>
+                <button type="reset" id="resetBtn">Reset</button>
+            </div>
+        </form>
+
+        <div id="confirmation" class="hidden">
+            <h2>Thank you for submitting!</h2>
+            <div id="summary"></div>
+            <button id="returnBtn">Fill Another Form</button>
+        </div>
+    </div>
+
+    <script src="highschool-script.js"></script>
+</body>
+</html>

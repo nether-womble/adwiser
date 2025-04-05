@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduLearn - Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="theme-toggle">
+        <button id="theme-toggle-btn">
+            <span class="light-mode-icon">🌙</span>
+            <span class="dark-mode-icon">☀️</span>
+        </button>
+    </div>
+
+    <div class="login-container">
+        <div class="login-card">
+            <div class="logo">
+                <h1>पढ़AI</h1>
+            </div>
+            
+            <div class="login-header">
+                <h2>log In</h2>
+                <p>Enter your credentials to access your account</p>
+            </div>
+            
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="Enter your email">
+                    <div class="error-message" id="email-error">Please enter a valid email address</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password">
+                    <div class="error-message" id="password-error">Password must be at least 6 characters</div>
+                </div>
+                
+                <div class="form-options">
+                    <div class="remember-me">
+                        <input type="checkbox" id="remember">
+                        <label for="remember">Remember me</label>
+                    </div>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+                
+                <button type="submit" class="login-btn">log In</button>
+
+                
+                <div class="register-link">
+                    Don't have an account? <a href="../Register/register.html">Register Now</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
